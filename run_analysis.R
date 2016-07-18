@@ -1,4 +1,4 @@
-#setwd("~/R/Development/workspace/data/GettingAndCleaningData/UCI HAR Dataset/")
+setwd("~/R/Development/workspace/data/GettingAndCleaningData/UCI HAR Dataset/")
 
 ##This script assumes that it lies in the same directory as the data set.
 ##It expects to find the files features.txt & activity_labels.txt in the same folder.
@@ -74,4 +74,4 @@ names(narrow_mean) <- gsub("Z$","Z-mean",names(narrow_mean))
 names(narrow_mean) <- gsub("\\()$","()-mean",names(narrow_mean))
 
 ## Output Tidy Data to a file "tideData.txt" is the current directory.
-write.table(narrow_mean,file="tidyData.txt")
+write.table(narrow_mean,file="tidyData.txt",row.name=FALSE)
