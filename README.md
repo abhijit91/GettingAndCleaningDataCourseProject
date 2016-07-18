@@ -7,7 +7,8 @@ This repository contain code for the Coursera Getting And Cleaning Data Project.
   - train/
   - test/
 2. A tidy dataset
-3. A code book describingch variable nd its value in thetidy data set
+  - tidyData.txt
+3. A code book describing each variable and its value in the tidy data set
 4. An explicit and exact recipe you used to go from 1 -> 2,3
 5. Analysis Script
   - run_analysis.R 
