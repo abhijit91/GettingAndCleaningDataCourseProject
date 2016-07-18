@@ -65,3 +65,5 @@ names(narrow) <-
 
 narrow_mean <-
         aggregate(. ~ subject + activity , data = narrow, mean)
+
+write.table(narrow_mean,file="tidyData.txt")
