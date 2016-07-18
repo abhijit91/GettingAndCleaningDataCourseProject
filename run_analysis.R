@@ -63,7 +63,15 @@ names(narrow) <-
 ##5 create a second, independent tidy data set with the average of 
 ##  each variable for each activity and each subject.
 
+##5.1 Using aggregate function to take mean of each column by subject & activity.
 narrow_mean <-
         aggregate(. ~ subject + activity , data = narrow, mean)
 
+##5.2 Rename column names to accurately reflect that it is a mean of values.
+names(narrow_mean) <- gsub("X$","X-mean",names(narrow_mean))
+names(narrow_mean) <- gsub("Y$","Y-mean",names(narrow_mean))
+names(narrow_mean) <- gsub("Z$","Z-mean",names(narrow_mean))
+names(narrow_mean) <- gsub("\\()$","()-mean",names(narrow_mean))
+
+## Output Tidy Data to a file "tideData.txt" is the current directory.
 write.table(narrow_mean,file="tidyData.txt")
